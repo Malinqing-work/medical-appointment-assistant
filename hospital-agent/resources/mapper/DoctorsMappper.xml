@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hospital.app.mapper.DoctorsMapper">
+    <select id="list" resultType="com.hospital.app.domain.dto.DoctorDTO">
+        select *
+        from doctor_dto_view
+        <where>
+            <if test="doctorName != null">
+                and doctor_name like concat('%',#{doctorName},'%')
+            </if>
+            and deleted = 0
+        </where>
+    </select>
+    <select id="listByDept" resultType="com.hospital.app.domain.dto.DoctorDTO">
+        select *
+        from doctor_dto_view
+        where deleted = 0
+        and department_name = #{departmentName}
+    </select>
+</mapper>
