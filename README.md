@@ -1,5 +1,6 @@
 # 🏥 医疗预约助手系统
 
+<img width="741" height="356" alt="image" src="https://github.com/user-attachments/assets/b4966579-1b11-4f7d-8719-c3c82067dff5" />
 
 基于 Spring Boot 和 LangChain4j 构建的智能医疗预约服务平台，提供自然语言交互的预约挂号、科室医生查询等功能。
 
